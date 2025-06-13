@@ -1,3 +1,8 @@
-const moongoose = require('moongoose');
- 
-moongoose.connect('mongomongodb+srv://admin:Nopassword@cluster0.ngm1qn5.mongodb.net/');
+const mongoose = require('mongoose');
+ function connectToDatabase() {
+    mongoose.connect('mongodb+srv://admin:Nopassword@cluster0.ngm1qn5.mongodb.net/form')
+        .then(() => {
+            console.log('Connected to MongoDB successfully');
+        })
+    }
+module.exports = connectToDatabase;
